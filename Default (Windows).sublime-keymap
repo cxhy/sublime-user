@@ -1,0 +1,23 @@
+[
+	{ "keys": ["ctrl+alt+q"], "command": "alignment" },
+    { "keys": ["ctrl+/"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+q"], "command": "toggle_record_macro" },
+	{ "keys": ["ctrl+alt+up"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+alt+down"], "command": "select_lines", "args": {"forward": true} },
+	    {
+        "keys": ["ctrl+alt+n"],
+        "command": "file_header_new_file",
+        "args":{
+            "paths": []
+        }
+    },
+    {
+        "keys": ["ctrl+alt+h"],
+        "command": "file_header_add_header",
+        "args":{
+            "paths": []
+        }
+    }
+
+
+]

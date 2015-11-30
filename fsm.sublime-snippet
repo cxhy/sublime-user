@@ -1,0 +1,65 @@
+<snippet>
+	<content><![CDATA[
+parameter S0   = 5'b00001;
+parameter S1   = 5'b00010;
+parameter S2   = 5'b00100;
+parameter S3   = 5'b01000;
+parameter S4   = 5'b10000;
+
+// FSM SINGE
+reg [4:0]   current_state;
+reg [4:0]   next_state;
+//FSM input
+wire        a;
+//FSM output
+reg         z;
+
+
+always@(posedge clk or negedge reset_n)begin
+    if(puc_rst = 1'b1)begin
+        current_state <= RESET;
+    end
+    else begin
+        current_state <= next_state;
+    end
+end
+
+
+always@(*)begin
+    if(puc_rst = 1'b1)begin
+        next_state <= RESET;
+    end
+    else begin
+        case (current_state)
+            S0        : next_state = S0
+            S1        : next_state = (a == 1) ? S2 : S1
+            S2        : next_state = (a == 1) ? S3 : S2 
+            S3        : next_state = (a == 1) ? S4 : S3
+            S4        : next_state = (a == 1) ? S1 : S4
+            default   : next_state = S0
+        endcase;
+    end
+end
+
+always@(negedge reset_n or current_state)begin
+    if(reset_n == 1'b0)begin
+        z = 0;
+    end
+    else begin
+        case(current_state)
+            S0   : Z = 0;
+            S1   : Z = 1; 
+            S2   : Z = 0;
+            S3   : Z = 1;
+            S4   : Z = 0;
+            default : z = 0;
+        endcase
+    end
+end
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>FSM</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.verilog</scope>
+</snippet>

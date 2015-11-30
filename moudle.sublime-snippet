@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+module ${1:module_name}(
+    //Inputs
+    ${2:single_name},
+    //Outputs
+    ${3:single_name}
+);
+
+input         wire  ${2:single_name};
+output        reg   ${3:single_name};
+
+endmoudle //$TM_FILENAME
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MOUDLE</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.verilog</scope>
+</snippet>

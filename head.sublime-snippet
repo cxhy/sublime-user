@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+//
+// *File Name: $TM_FILENAME 
+// 
+// *Module Description:
+//                       ${1:add description here}
+//
+// *Author(s):
+//              - ${2:Guodezheng cxhy1981@gmail.com},
+//
+//----------------------------------------------------------------------------
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>head</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.verilog</scope>
+</snippet>
