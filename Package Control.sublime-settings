@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Case Conversion",
 		"ConvertToUTF8",
 		"FileHeader",
 		"GitGutter",
@@ -14,6 +15,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-iverilog",
 		"SublimeLinter-contrib-xvhdl",
+		"SublimeREPL",
 		"Verilog",
 		"VHDL"
 	]
