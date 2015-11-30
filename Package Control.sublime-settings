@@ -8,6 +8,7 @@
 		"Alignment",
 		"Case Conversion",
 		"ConvertToUTF8",
+		"FileBrowser",
 		"FileDiffs",
 		"FileHeader",
 		"GitGutter",
